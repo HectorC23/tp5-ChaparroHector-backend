@@ -1,0 +1,45 @@
+<main class="container-fluid" > 
+    <hr>
+    <button type="button" class="btn btn-primary mt-5" (click)="agregar()" >Agregar</button>
+
+    <table class="table text-center mt-3 mb-5 border border-primary">
+        <thead>
+        <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col"> Dni</th>
+            <th scope="col"> Precio Real </th>
+            <th scope="col"> Espectador </th>
+            <th scope="col"> Fecha de cobro </th>
+            <th scope="col"> Precio Cobrado </th>
+            <th scope="col"> Acciones </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let t of arrayTickets" >
+            <!-- <th scope="row">1</th> -->
+            <td> {{t.dni}} </td>
+            <td> {{t.precioReal}} </td>
+            <td> {{t.tipoExpectador}} </td>
+            <td> {{t.fechaCobro | date: 'dd/MM/yyyy' }} </td>
+            <td> {{t.precioCobrado}} </td>
+            <td> 
+                <button type="button" class="btn btn-danger me-2" (click)="eliminar(t.dni)"  >Elimnar</button>
+                <button type="button" class="btn btn-warning" (click)="actualizar(t.dni)">Modificar </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="row col-12">
+
+        <div class="col-6">
+            <label for="filtro"> INGRESE FILTRO DE ESPECTADOR (E/L):</label>
+            <input type="text" id="filtro" maxlength="1">
+            <button type="button" class="btn btn-primary" (click)="contarExpectadores()">Filtrar</button>
+            <p class="card-text">Cantidad de espectadores: {{contExpectadores}}</p>
+            <p class="card-text">Precio total: {{contTotal}}</p>
+        </div>
+
+    </div>
+
+</main> 

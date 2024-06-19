@@ -1,0 +1,111 @@
+<main class="container-fluid mb-5">
+    
+    
+
+  <!-- MODAL -->
+    <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        
+        <div >
+          <p *ngIf="!carrito.arrayCarrito.length">
+            No hay productos en el carrito 
+          </p>
+        </div>
+  
+        
+
+        <div *ngIf="carrito.arrayCarrito.length">
+          <div *ngFor="let car of carrito.arrayCarrito" class="card mb-3" style="max-width: 540px; height: 200px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="../../../assets/images/{{car.imagen}}" class="img-fluid rounded-start" alt="{{car.nombre}}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"> {{car.nombre}}</h5>
+                  <p>${{car.precio}}</p>
+  
+                  <div class="row row-cols-3 d-flex justify-content-around">
+                    <i class="bi bi-plus" (click)="agregarcarrito(car)"  ></i> 
+                    <p>{{car.stock}}</p>
+                    <i class="bi bi-dash" (click)="descontar(car)"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+  
+            <p > Cantidad de productos: {{carrito.cont}}</p>
+            <p > Total del carrito: {{carrito.total}}</p>
+  
+          </div>
+        </div>
+        
+      </div> -->
+  
+      
+  
+    <!-- </div> -->
+    <hr>
+    <h2>Productos</h2>
+    <button type="button" class="btn btn-primary mt-5" (click)="agregar()" >Agregar</button>
+
+    <table class="table text-center mt-3 mb-5 border border-primary">
+        <thead>
+        <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col"> Nombre</th>
+            <th scope="col"> Descripcion </th>
+            <th scope="col"> imagen </th>
+            <th scope="col"> Precio </th>
+            <th scope="col"> Stock </th>
+            <th scope="col"> Destacado </th>
+            <th scope="col"> Opciones </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of productos" >
+            <!-- <th scope="row">1</th> -->
+            <td> {{p.nombre}} </td>
+            <td> {{p.descripcion}} </td>
+            <td> <img src="../../../assets/images/{{p.imagen}}" class="card-img-top" style="max-height: 50px;" alt="{{p.nombre}}"> </td>
+
+            <td> {{p.precio}} </td>
+            <td> {{p.stock}} </td>
+            <td> {{p.destacado}} </td>
+            <td> 
+                <button type="button" class="btn btn-danger me-2" (click)="eliminar(p._id)"  >Elimnar</button>
+                <button type="button" class="btn btn-warning" (click)="modificar(p._id)" >Modificar </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <h2>Productos Destacados</h2>
+    <button type="button" class="btn btn-primary mt-5" (click)="obtenerDestacados()" >Mostrar Los Destacados</button>
+    <div class="row row-cols-3 d-flex justify-content-around">
+  
+      <div *ngFor="let producto of destacados" class="card mb-4 mt-1" style="width: 25rem;" >
+  
+        <p class="text-end">${{producto.precio}}</p>
+        <img src="../../../assets/images/{{producto.imagen}}" class="card-img-top" style="max-height: 300px;" alt="{{producto.nombre}}">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">{{producto.nombre}}</h5>
+          <p class="card-text">{{producto.descripcion}}</p>
+           <a class="btn btn-success col-6"  >Añadir al carrito <i class="bi bi-cart3"></i></a> 
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  
+  
+  </main>
+  

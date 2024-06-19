@@ -1,0 +1,27 @@
+body {
+    width: 100%;
+}
+
+.cmain {
+    margin: 1rem 0px 0px 0px;
+}
+.cont6{
+    height: 2rem;
+    background-color: #001f54;
+}
+.pcoti{
+    font-size: 0.8rem;
+}
+.form-cont{
+    background-color: #034078;
+}
+.bi-arrow-right {
+    color: white;
+    font-weight: 100;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

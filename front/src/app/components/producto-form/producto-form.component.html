@@ -1,0 +1,51 @@
+<main class="container-fluid d-flex flex-column align-items-center justify-content-center my-5">
+
+    <h2> FORMULARIO DE VENTA DE TICKETS </h2>
+    <form action="" method="post" class="container-fluid py-5 mb-5 row col-6 d-flex flex-column align-items-center rounded-4 border border-4 border-primary f">
+        
+        <div class="mb-3 d-flex align-items-center justify-content-center col-8 m-auto gap-3">
+          <label for="nombre" class="form-label">Nombre: </label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required  [(ngModel)]="Producto.nombre" >
+        </div>
+
+        <div class="mb-3 d-flex align-items-center justify-content-center col-8 m-auto gap-3">
+            <label for="descripcion" class="form-label">Descripcion: </label>
+            <!-- <textarea name="descripcion" id="descripcion" required [(ngModel)]="Producto.descripcion"></textarea> -->
+            <input type="text" class="form-control" id="descripcion" name="descripcion" required  [(ngModel)]="Producto.descripcion" >
+        </div>
+
+        <div class="mb-3 d-flex align-items-center justify-content-center col-8 m-auto gap-3">
+            <label for="imagen" class="form-label">IMAGEN: </label>
+            <input type="number" class="form-control" id="imagen" name="imagen"  [(ngModel)]="Producto.imagen" >
+            <!-- <input type="image" class="form-control" src="" alt="" id="imagen" name="imagen" [(ngModel)]="Producto.imagen"> -->
+        </div>
+
+        <div class="mb-3 d-flex align-items-center justify-content-center col-8 m-auto gap-3">
+            <label for="precio" class="form-label">Precio: </label>
+            <input type="number" class="form-control" id="precio" name="precio" required  [(ngModel)]="Producto.precio" >
+        </div>
+
+        <div class="mb-3 d-flex align-items-center justify-content-center col-8 m-auto gap-3">
+            <label for="stock" class="form-label">Stock: </label>
+            <input type="number" class="form-control" id="stock" name="stock" required  [(ngModel)]="Producto.stock" >
+        </div>
+
+        <div class="mb-3 d-flex align-items-center justify-content-center col-8 m-auto gap-3">
+            <p class="form-label" >Tipo de Espectador:</p>
+            <!-- (change)="captarCambio()" -->
+            <select id="destacado"  class="form-select" name="destacado" required aria-label="Default select example" [(ngModel)]="Producto.destacado">
+                <option selected>True o False..</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select>
+        </div>
+
+        
+
+        <!-- (click)="registrar()" -->
+        <button *ngIf="accion == 'new'" type="submit" class="btn btn-primary" (click)="registrar()"  >Agregar</button>
+        <!-- (click)="actualizar()" -->
+        <button *ngIf="accion == 'update'" type="button" class="btn btn-warning" (click)="actualizar()" > Actualizar </button>
+    </form>
+
+</main>

@@ -1,0 +1,37 @@
+<main class="container-fluid mb-5">
+
+    <h2> FORMULARIO DE VENTA DE TICKETS </h2>
+    <form action="" method="post">
+        <div class="mb-3">
+          <label for="dni" class="form-label">DNI: </label>
+          <input type="number" class="form-control" id="dni" name="dni" required  [(ngModel)]="ticket.dni" >
+        </div>
+
+        <div class="mb-3">
+          <label for="p-real" class="form-label">Precio Real: </label>
+          <input type="number" (change)="captarCambio()" class="form-control" id="p-real" name="p-real" required="true" [(ngModel)]="ticket.precioReal">
+        </div>
+
+        <div class="mb-3">
+            <p class="form-label" >Tipo de Espectador:</p>
+            <select id="expectador" (change)="captarCambio()" class="form-select" name="expectador" required aria-label="Default select example" [(ngModel)]="ticket.tipoExpectador">
+                <option selected>Local o Extranjero...</option>
+                <option value="l">Local</option>
+                <option value="e">Extranjero</option>
+              </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="f-cobro" class="form-label"> Fecha de cobro: </label>
+          <input type="date" class="form-control" id="f-cobro" name="f-cobro" required [(ngModel)]="ticket.fechaCobro">
+        </div>
+
+        <div *ngIf="expectador !== '' && pCobrado !== 0 " class="mb-3">
+          {{pCobrado}}
+        </div>
+
+        <button *ngIf="accion == 'new'" type="submit" class="btn btn-primary" (click)="registrarticket()" >Agregar</button>
+        <button *ngIf="accion == 'update'" type="button" class="btn btn-warning" (click)="actualizarticket()"> Actualizar </button>
+    </form>
+
+</main>

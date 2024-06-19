@@ -1,0 +1,56 @@
+http://localhost:3000/api/producto/
+
+//POST CREAR PRODUCTO
+KEY: Content-Type  ||  value: application/json
+body: raw json
+
+{
+    "nombre": "notebook asus 13L",
+    "descripcion": "Notebook Asus ultimo modelo, 10tb de memoria, muy copada",
+    "imagen": "notebookAsus.jpg",
+    "precio": 45.5,
+    "stock": 5,
+    "destacado": true
+},
+{
+    "nombre": "Mouse Pad",
+    "descripcion": "Mouse pad de micky mouse",
+    "imagen": "MousePad.jpg",
+    "precio": 70.99,
+    "stock": 20,
+    "destacado": false
+},
+{
+    "nombre": "Teclado", 
+    "descripcion": "Teclado Mecanico ultimo modelo", 
+    "imagen": "TecladoMecanico.jpg", 
+    "precio": 50.6,
+    "stock": 0,
+    "destacado": false
+},
+{
+    "nombre": "PC Asus", 
+    "descripcion": "disco40GB, 15pulgadas, ultimo modelo, en oferta", 
+    "imagen": "PcAsus.jpg", 
+    "precio": 200.7,
+    "stock": 0,
+    "destacado": true
+},
+{
+    "nombre": "Mouse", 
+    "descripcion": "Mouse Tactico", 
+    "imagen": "Mouse.jpg", 
+    "precio": 20.5,
+    "stock": 0,
+    "destacado": false
+},
+{
+    "nombre": "Monitor LG 14", 
+    "descripcion": "Monitor de gama alta, HD4k 4k 4k, entrada HDMI", 
+    "imagen": "Monitor.jpg", 
+    "precio": 99,
+    "stock": 0,
+    "destacado": true
+},
+
+
