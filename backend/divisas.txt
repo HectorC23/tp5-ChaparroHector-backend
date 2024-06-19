@@ -1,0 +1,32 @@
+{
+    "monedaOrigen": USD-EstadosUnidos,
+    "cantidadOrigen": 1000,
+    "monedaDestino": PESOS,
+    "cantidadDestino": 100000,
+    "emailCliente": lucho_33@gmail.com,
+    "tasaConversion": 10,
+},
+{
+    "monedaOrigen": PESOS,
+    "cantidadOrigen": 5000000,
+    "monedaDestino": USD-EstadosUnidos,
+    "cantidadDestino": 5000,
+    "emailCliente": lucho_33@gmail.com,
+    "tasaConversion": 0.01,
+},
+{
+    "monedaOrigen": BRL-Brasil,
+    "cantidadOrigen": 6000000,
+    "monedaDestino": USD-EstadosUnidos,
+    "cantidadDestino": 600000,
+    "emailCliente": lucho_33@gmail.com,
+    "tasaConversion": 0.1,
+},
+{
+    "monedaOrigen": "USD-EstadosUnidos",
+    "cantidadOrigen": 11111,
+    "monedaDestino": "PESOS",
+    "cantidadDestino": 11,
+    "emailCliente": "lucho_33@gmail.com",
+    "tasaConversion": 10
+}
